@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".EditTaskActivity">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textSize="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:textStyle="bold"
+            android:text="Update Task"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayout1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Title"
+            app:boxBackgroundColor="@color/lightBlue"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/baseline_edit_note_24"
+            app:startIconTint="#591C1C1C">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TitleInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="16" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayout2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Description"
+            app:boxBackgroundColor="@color/lightBlue"
+            app:counterEnabled="true"
+            app:counterMaxLength="25"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/baseline_description_24"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/DescriptionInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTint="#373737"
+                android:maxLength="26" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/TextInputLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            app:boxBackgroundColor="@color/lightBlue"
+            app:startIconDrawable="@drawable/baseline_calendar_month_24"
+            android:hint="Due Date"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/DueDateInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/TextInputLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            app:boxBackgroundColor="@color/lightBlue"
+            app:startIconDrawable="@drawable/baseline_access_time_24"
+            app:endIconMode="clear_text"
+            android:hint="Time">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TimeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:id="@+id/TextInputLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                app:boxBackgroundColor="@color/lightBlue"
+                android:hint="@string/Select"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/taskPriority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:layout_weight="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:id="@+id/TextInputLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                app:boxBackgroundColor="@color/lightBlue"
+                android:hint="@string/status"
+                >
+                <AutoCompleteTextView
+                    android:id="@+id/taskStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:layout_weight="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <Button
+            android:id="@+id/updatebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:background="@drawable/custom_button"
+            android:textSize="20dp"
+            android:text="Update TASK" />
+    </LinearLayout>
+
+</ScrollView>
